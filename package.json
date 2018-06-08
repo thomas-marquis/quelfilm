@@ -2,9 +2,10 @@
   "name": "quelfilm",
   "version": "1.0.0",
   "description": "chatbot to help you choose movie",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,6 @@
   "bugs": {
     "url": "https://github.com/thomas-marquis/quelfilm/issues"
   },
-  "homepage": "https://github.com/thomas-marquis/quelfilm#readme"
+  "homepage": "https://github.com/thomas-marquis/quelfilm#readme",
+  "dependencies": {}
 }
