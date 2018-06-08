@@ -1,0 +1,25 @@
+{
+  "name": "quelfilm",
+  "version": "1.0.0",
+  "description": "chatbot to help you choose movie",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomas-marquis/quelfilm.git"
+  },
+  "keywords": [
+    "bot",
+    "dialgflow",
+    "movie",
+    "ai"
+  ],
+  "author": "Thomas Marquis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomas-marquis/quelfilm/issues"
+  },
+  "homepage": "https://github.com/thomas-marquis/quelfilm#readme"
+}
