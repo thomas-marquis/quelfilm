@@ -1,3 +1,6 @@
+/**
+ * The text response message.
+ */
 export default class Text {
   private text: Array<String>;
 
@@ -6,7 +9,8 @@ export default class Text {
   }
 
   /**
-   * Getter $text
+   * Optional. The collection of the agent's responses.
+   *
    * @return {Array<String>}
    */
   public getText(): Array<String> {

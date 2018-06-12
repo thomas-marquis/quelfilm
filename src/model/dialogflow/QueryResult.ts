@@ -173,8 +173,9 @@ export default class Queryresult {
    *
    * @param {String} value
    */
-  public setQueryText(value: String) {
+  public setQueryText(value: String): Queryresult {
     this.queryText = value;
+    return this;
   }
 
   /**
@@ -182,8 +183,9 @@ export default class Queryresult {
    *
    * @param {String} value
    */
-  public setLanguageCode(value: String) {
+  public setLanguageCode(value: String): Queryresult {
     this.languageCode = value;
+    return this;
   }
 
   /**
@@ -197,8 +199,9 @@ export default class Queryresult {
    *
    * @param {Number} value
    */
-  public setSpeechRecognitionConfidence(value: Number) {
+  public setSpeechRecognitionConfidence(value: Number): Queryresult {
     this.speechRecognitionConfidence = value;
+    return this;
   }
 
   /**
@@ -206,8 +209,9 @@ export default class Queryresult {
    *
    * @param {String} value
    */
-  public setAction(value: String) {
+  public setAction(value: String): Queryresult {
     this.action = value;
+    return this;
   }
 
   /**
@@ -215,8 +219,9 @@ export default class Queryresult {
    *
    * @param {any} value
    */
-  public setParameters(value: any) {
+  public setParameters(value: any): Queryresult {
     this.parameters = value;
+    return this;
   }
 
   /**
@@ -229,8 +234,9 @@ export default class Queryresult {
    *
    * @param {Boolean} value
    */
-  public setAllRequiredParamsPresent(value: Boolean) {
+  public setAllRequiredParamsPresent(value: Boolean): Queryresult {
     this.allRequiredParamsPresent = value;
+    return this;
   }
 
   /**
@@ -238,8 +244,9 @@ export default class Queryresult {
    *
    * @param {String} value
    */
-  public setFulfillmentText(value: String) {
+  public setFulfillmentText(value: String): Queryresult {
     this.fulfillmentText = value;
+    return this;
   }
 
   /**
@@ -257,8 +264,9 @@ export default class Queryresult {
    *
    * @param {String} value
    */
-  public setWebhookSource(value: String) {
+  public setWebhookSource(value: String): Queryresult {
     this.webhookSource = value;
+    return this;
   }
 
   /**
@@ -267,8 +275,9 @@ export default class Queryresult {
    *
    * @param {any} value
    */
-  public setWebhookPayload(value: any) {
+  public setWebhookPayload(value: any): Queryresult {
     this.webhookPayload = value;
+    return this;
   }
 
   /**
@@ -277,8 +286,9 @@ export default class Queryresult {
    *
    * @param {Intent} value
    */
-  public setIntent(value: Intent) {
+  public setIntent(value: Intent): Queryresult {
     this.intent = value;
+    return this;
   }
 
   /**
@@ -286,8 +296,9 @@ export default class Queryresult {
    *
    * @param {Number} value
    */
-  public setIntentDetectionConfidence(value: Number) {
+  public setIntentDetectionConfidence(value: Number): Queryresult {
     this.intentDetectionConfidence = value;
+    return this;
   }
 
   /**
@@ -295,7 +306,8 @@ export default class Queryresult {
    *
    * @param {any} value
    */
-  public setDiagnosticInfo(value: any) {
+  public setDiagnosticInfo(value: any): Queryresult {
     this.diagnosticInfo = value;
+    return this;
   }
 }

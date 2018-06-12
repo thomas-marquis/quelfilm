@@ -1,9 +1,13 @@
+/**
+ * The button object that appears at the bottom of a card.
+ */
 export default class Button {
   private text: String;
   private postback: String;
 
   /**
    * Optional. The text to show on the button.
+   *
    * @return {String}
    */
   public getText(): String {
@@ -12,6 +16,7 @@ export default class Button {
 
   /**
    * Optional. The text to send back to the Dialogflow API or a URI to open.
+   *
    * @return {String}
    */
   public getPostback(): String {
@@ -20,6 +25,7 @@ export default class Button {
 
   /**
    * Optional. The text to show on the button.
+   *
    * @param {String} value
    * @return {Button} this
    */
@@ -30,6 +36,7 @@ export default class Button {
 
   /**
    * Optional. The text to send back to the Dialogflow API or a URI to open.
+   *
    * @param {String} value
    * @return {Button} this
    */

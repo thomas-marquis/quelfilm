@@ -1,3 +1,6 @@
+/**
+ * The quick replies response message.
+ */
 export default class QuickReplies {
   private title: String;
   private quickReplies: Array<String>;
@@ -7,7 +10,8 @@ export default class QuickReplies {
   }
 
   /**
-   * Getter $title
+   * Optional. The title of the collection of quick replies.
+   *
    * @return {String}
    */
   public getTitle(): String {
@@ -15,7 +19,8 @@ export default class QuickReplies {
   }
 
   /**
-   * Getter $quickReplies
+   * Optional. The collection of quick replies.
+   *
    * @return {Array<String>}
    */
   public getQuickReplies(): Array<String> {
@@ -23,7 +28,8 @@ export default class QuickReplies {
   }
 
   /**
-   * Setter $title
+   * Optional. The title of the collection of quick replies.
+   *
    * @param {String} value
    */
   public setTitle(value: String): QuickReplies {

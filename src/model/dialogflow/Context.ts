@@ -1,10 +1,15 @@
+/**
+ * Represents a context.
+ */
 export default class Context {
   private name: String;
   private lifespanCount: Number;
   private parameters: any;
 
   /**
-   * Getter $name
+   * Required. The unique identifier of the context.
+   * Format: projects/<Project ID>/agent/sessions/<Session ID>/contexts/<Context ID>.
+   *
    * @return {String}
    */
   public getName(): String {
@@ -12,7 +17,10 @@ export default class Context {
   }
 
   /**
-   * Getter $lifespanCount
+   * Optional. The number of conversational query requests after which the context expires.
+   * If set to 0 (the default) the context expires immediately.
+   * Contexts expire automatically after 10 minutes even if there are no matching queries.
+   *
    * @return {Number}
    */
   public getLifespanCount(): Number {
@@ -20,7 +28,8 @@ export default class Context {
   }
 
   /**
-   * Getter $parameters
+   * Optional. The collection of parameters associated with this context.
+   *
    * @return {any}
    */
   public getParameters(): any {
@@ -28,7 +37,9 @@ export default class Context {
   }
 
   /**
-   * Setter $name
+   * Required. The unique identifier of the context.
+   * Format: projects/<Project ID>/agent/sessions/<Session ID>/contexts/<Context ID>.
+   *
    * @param {String} value
    */
   public setName(value: String): Context {
@@ -37,7 +48,10 @@ export default class Context {
   }
 
   /**
-   * Setter $lifespanCount
+   * Optional. The number of conversational query requests after which the context expires.
+   * If set to 0 (the default) the context expires immediately.
+   * Contexts expire automatically after 10 minutes even if there are no matching queries.
+   *
    * @param {Number} value
    */
   public setLifespanCount(value: Number): Context {
@@ -46,7 +60,8 @@ export default class Context {
   }
 
   /**
-   * Setter $parameters
+   * Optional. The collection of parameters associated with this context.
+   *
    * @param {any} value
    */
   public setParameters(value: any): Context {

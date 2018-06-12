@@ -12,6 +12,7 @@ export default class Item {
 
   /**
    * Required. Additional info about the option item.
+   *
    * @return {SelectItemInfo}
    */
   public getInfo(): SelectItemInfo {
@@ -20,6 +21,7 @@ export default class Item {
 
   /**
    * Required. Title of the carousel item.
+   *
    * @return {String}
    */
   public getTitle(): String {
@@ -28,6 +30,7 @@ export default class Item {
 
   /**
    * Optional. The body text of the card.
+   *
    * @return {String}
    */
   public getDescription(): String {
@@ -36,6 +39,7 @@ export default class Item {
 
   /**
    * Optional. The image to display.
+   *
    * @return {Image}
    */
   public getImage(): Image {
@@ -44,6 +48,7 @@ export default class Item {
 
   /**
    * Required. Additional info about the option item.
+   *
    * @param {SelectItemInfo} value
    */
   public setInfo(value: SelectItemInfo): Item {
@@ -53,6 +58,7 @@ export default class Item {
 
   /**
    * Required. Title of the carousel item.
+   *
    * @param {String} value
    */
   public setTitle(value: String): Item {
@@ -62,6 +68,7 @@ export default class Item {
 
   /**
    * Optional. The body text of the card.
+   *
    * @param {String} value
    */
   public setDescription(value: String): Item {
@@ -71,6 +78,7 @@ export default class Item {
 
   /**
    * Optional. The image to display.
+   *
    * @param {Image} value
    */
   public setImage(value: Image): Item {

@@ -16,6 +16,7 @@ export default class Message {
 
   /**
    * Optional. The platform that this message is intended for.
+   *
    * @return {Platform}
    */
   public getPlatform(): Platform {
@@ -24,6 +25,7 @@ export default class Message {
 
   /**
    * The text response.
+   *
    * @return {Text}
    */
   public getText(): Text {
@@ -32,6 +34,7 @@ export default class Message {
 
   /**
    * The quick replies response.
+   *
    * @return {QuickReplies}
    */
   public getQuickReplies(): QuickReplies {
@@ -40,6 +43,7 @@ export default class Message {
 
   /**
    * The card response.
+   *
    * @return {Card}
    */
   public getCard(): Card {
@@ -48,6 +52,7 @@ export default class Message {
 
   /**
    * The carousel card response for Actions on Google.
+   *
    * @return {CarouselSelect}
    */
   public getCarouselSelect(): CarouselSelect {
@@ -56,6 +61,7 @@ export default class Message {
 
   /**
    * Optional. The platform that this message is intended for.
+   *
    * @param {Platform} value
    */
   public setPlatform(value: Platform): Message {
@@ -65,6 +71,7 @@ export default class Message {
 
   /**
    * The text response.
+   *
    * @param {Text} value
    */
   public setText(value: Text) {
@@ -73,6 +80,7 @@ export default class Message {
 
   /**
    * The quick replies response.
+   *
    * @param {QuickReplies} value
    */
   public setQuickReplies(value: QuickReplies) {
@@ -81,6 +89,7 @@ export default class Message {
 
   /**
    * The card response.
+   *
    * @param {Card} value
    */
   public setCard(value: Card) {
@@ -89,6 +98,7 @@ export default class Message {
 
   /**
    * The carousel card response for Actions on Google.
+   *
    * @param {CarouselSelect} value
    */
   public setCarouselSelect(value: CarouselSelect) {

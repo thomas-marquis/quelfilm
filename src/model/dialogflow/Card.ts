@@ -1,5 +1,8 @@
 import Button from "./Button";
 
+/**
+ * The card response message.
+ */
 export default class Card {
   private title: String;
   private subtitle: String;
@@ -15,6 +18,7 @@ export default class Card {
 
   /**
    * Optional. The title of the card.
+   *
    * @return {String}
    */
   public getTitle(): String {
@@ -23,6 +27,7 @@ export default class Card {
 
   /**
    * Optional. The subtitle of the card.
+   *
    * @return {String}
    */
   public getSubtitle(): String {
@@ -31,6 +36,7 @@ export default class Card {
 
   /**
    * Optional. The public URI to an image file for the card
+   *
    * @return {String}
    */
   public getImageUri(): String {
@@ -39,6 +45,7 @@ export default class Card {
 
   /**
    * Optional. The collection of card buttons.
+   *
    * @return {Array<Button>}
    */
   public getButtons(): Array<Button> {
@@ -47,6 +54,7 @@ export default class Card {
 
   /**
    * Optional. The title of the card.
+   *
    * @param {String} value
    * @returns this
    */
@@ -57,6 +65,7 @@ export default class Card {
 
   /**
    * Optional. The subtitle of the card.
+   *
    * @param {String} value
    * @returns this
    */
@@ -67,6 +76,7 @@ export default class Card {
 
   /**
    * Optional. The public URI to an image file for the card
+   *
    * @param {String} value
    * @returns this
    */

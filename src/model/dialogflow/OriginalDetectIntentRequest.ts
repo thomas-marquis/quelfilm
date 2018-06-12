@@ -1,9 +1,14 @@
+/**
+ * Represents the contents of the original request that was passed to the
+ * [Streaming]sessions.detectIntent call.
+ */
 export default class OriginalDetectIntentRequest {
   private source: String;
   private payload: any;
 
   /**
-   * Getter $source
+   * The source of this request, e.g., google, facebook, slack. It is set by Dialogflow-owned servers.
+   *
    * @return {String}
    */
   public getSource(): String {
@@ -11,7 +16,8 @@ export default class OriginalDetectIntentRequest {
   }
 
   /**
-   * Getter $payload
+   * Optional. This field is set to the value of QueryParameters.payload field passed in the request.
+   *
    * @return {any}
    */
   public getPayload(): any {
@@ -19,7 +25,8 @@ export default class OriginalDetectIntentRequest {
   }
 
   /**
-   * Setter $source
+   * The source of this request, e.g., google, facebook, slack. It is set by Dialogflow-owned servers.
+   *
    * @param {String} value
    */
   public setSource(value: String): OriginalDetectIntentRequest {
@@ -28,7 +35,8 @@ export default class OriginalDetectIntentRequest {
   }
 
   /**
-   * Setter $payload
+   * Optional. This field is set to the value of QueryParameters.payload field passed in the request.
+   *
    * @param {any} value
    */
   public setPayload(value: any): OriginalDetectIntentRequest {

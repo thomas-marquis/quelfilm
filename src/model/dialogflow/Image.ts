@@ -7,6 +7,7 @@ export default class Image {
 
   /**
    * Optional. The public URI to an image file.
+   *
    * @return {String}
    */
   public getImageUri(): String {
@@ -15,6 +16,7 @@ export default class Image {
 
   /**
    * Optional. A text description of the image to be used for accessibility, e.g., screen readers.
+   *
    * @return {String}
    */
   public getAccessibilityText(): String {
@@ -23,6 +25,7 @@ export default class Image {
 
   /**
    * Optional. The public URI to an image file.
+   *
    * @param {String} value
    * @returns this
    */
@@ -33,6 +36,7 @@ export default class Image {
 
   /**
    * Optional. A text description of the image to be used for accessibility, e.g., screen readers.
+   *
    * @param {String} value
    * @returns this
    */

@@ -11,6 +11,7 @@ export default class SelectItemInfo {
 
   /**
    * Required. A unique key that will be sent back to the agent if this response is given.
+   *
    * @return {String}
    */
   public getKey(): String {
@@ -19,6 +20,7 @@ export default class SelectItemInfo {
 
   /**
    * Optional. A list of synonyms that can also be used to trigger this item in dialog.
+   *
    * @return {Array<String>}
    */
   public getSynonyms(): Array<String> {
@@ -27,6 +29,7 @@ export default class SelectItemInfo {
 
   /**
    * Required. A unique key that will be sent back to the agent if this response is given.
+   *
    * @param {String} value
    * @returns this
    */

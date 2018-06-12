@@ -12,6 +12,7 @@ export default class CarouselSelect {
 
   /**
    * Required. Carousel items.
+   *
    * @return {Array<Item>}
    */
   public getItems(): Array<Item> {
