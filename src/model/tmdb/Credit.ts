@@ -2,45 +2,31 @@ import Cast from "./Cast";
 import Crew from "./Crew";
 
 export default class Credit {
-  private id: Number;
-  private cast: Array<Cast>;
-  private crew: Array<Crew>;
+  private _id: Number;
+  private _cast: Array<Cast>;
+  private _crew: Array<Crew>;
 
-  constructor() {
-    this.cast = new Array();
-    this.crew = new Array();
+  get id(): Number {
+      return this._id;
   }
 
-  /**
-   * Getter $id
-   * @return {Number}
-   */
-  public getId(): Number {
-    return this.id;
+  set id(value: Number) {
+      this._id = value;
   }
 
-  /**
-   * Getter $cast
-   * @return {Array<Cast>}
-   */
-  public getCast(): Array<Cast> {
-    return this.cast;
+  get cast(): Array<Cast> {
+      return this._cast;
   }
 
-  /**
-   * Getter $crew
-   * @return {Array<Crew>}
-   */
-  public getCrew(): Array<Crew> {
-    return this.crew;
+  set cast(value: Array<Cast>) {
+      this._cast = value;
   }
 
-  /**
-   * Setter $id
-   * @param {Number} value
-   */
-  public setId(value: Number): Credit {
-    this.id = value;
-    return this;
+  get crew(): Array<Crew> {
+      return this._crew;
+  }
+
+  set crew(value: Array<Crew>) {
+      this._crew = value;
   }
 }

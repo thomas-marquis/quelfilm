@@ -1,51 +1,32 @@
-/**
- * Represents an intent. Intents convert a number of user expressions
- * or patterns into an action. An action is an extraction of a user
- * command or sentence semantics.
- */
+import Parameter from "./Parameter";
+
 export default class Intent {
-  private name: String;
-  private displayName: String;
+    private _name: String;
+    private _displayName: String;
+    private _parameters: Array<Parameter>;
 
-  /**
-   * Required for all methods except create (create populates the name automatically.
-   * The unique identifier of this intent.
-   * Format: projects/<Project ID>/agent/intents/<Intent ID>.
-   *
-   * @return {String}
-   */
-  public getName(): String {
-    return this.name;
-  }
 
-  /**
-   * Required. The name of this intent.
-   *
-   * @return {String}
-   */
-  public getDisplayName(): String {
-    return this.displayName;
-  }
+    get name(): String {
+        return this._name;
+    }
 
-  /**
-   * Required for all methods except create (create populates the name automatically.
-   * The unique identifier of this intent.
-   * Format: projects/<Project ID>/agent/intents/<Intent ID>.
-   *
-   * @param {String} value
-   */
-  public setName(value: String): Intent {
-    this.name = value;
-    return this;
-  }
+    set name(value: String) {
+        this._name = value;
+    }
 
-  /**
-   * Required. The name of this intent.
-   *
-   * @param {String} value
-   */
-  public setDisplayName(value: String): Intent {
-    this.displayName = value;
-    return this;
-  }
+    get displayName(): String {
+        return this._displayName;
+    }
+
+    set displayName(value: String) {
+        this._displayName = value;
+    }
+
+    get parameters(): Array<Parameter> {
+        return this._parameters;
+    }
+
+    set parameters(value: Array<Parameter>) {
+        this._parameters = value;
+    }
 }

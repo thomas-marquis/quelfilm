@@ -1,92 +1,47 @@
 export default class Crew {
-  private id: Number;
-  private name: String;
-  private department: String;
-  private gender: Number;
-  private job: String;
+  private _id: Number;
+  private _name: String;
+  private _department: String;
+  private _gender: Number;
+  private _job: String;
 
-  /**
-   * Getter $id
-   * @return {Number}
-   */
-  public getId(): Number {
-    return this.id;
+  get id(): Number {
+      return this._id;
   }
 
-  /**
-   * Getter $name
-   * @return {String}
-   */
-  public getName(): String {
-    return this.name;
+  set id(value: Number) {
+      this._id = value;
   }
 
-  /**
-   * Getter $department
-   * @return {String}
-   */
-  public getDepartment(): String {
-    return this.department;
+  get name(): String {
+      return this._name;
   }
 
-  /**
-   * Getter $gender
-   * @return {Number}
-   */
-  public getGender(): Number {
-    return this.gender;
+  set name(value: String) {
+      this._name = value;
   }
 
-  /**
-   * Getter $job
-   * @return {String}
-   */
-  public getJob(): String {
-    return this.job;
+  get department(): String {
+      return this._department;
   }
 
-  /**
-   * Setter $id
-   * @param {Number} value
-   */
-  public setId(value: Number): Crew {
-    this.id = value;
-    return this;
+  set department(value: String) {
+      this._department = value;
   }
 
-  /**
-   * Setter $name
-   * @param {String} value
-   */
-  public setName(value: String): Crew {
-    this.name = value;
-    return this;
+  get gender(): Number {
+      return this._gender;
   }
 
-  /**
-   * Setter $department
-   * @param {String} value
-   */
-  public setDepartment(value: String): Crew {
-    this.department = value;
-    return this;
+  set gender(value: Number) {
+      this._gender = value;
   }
 
-  /**
-   * Setter $gender
-   * @param {Number} value
-   */
-  public setGender(value: Number): Crew {
-    this.gender = value;
-    return this;
+  get job(): String {
+      return this._job;
   }
 
-  /**
-   * Setter $job
-   * @param {String} value
-   */
-  public setJob(value: String): Crew {
-    this.job = value;
-    return this;
+  set job(value: String) {
+      this._job = value;
   }
 }

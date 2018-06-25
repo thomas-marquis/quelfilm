@@ -1,92 +1,47 @@
 export default class Cast {
-  private id: Number;
-  private castId: Number;
-  private character: String;
-  private gender: Number;
-  private name: String;
+  private _id: Number;
+  private _castId: Number;
+  private _character: String;
+  private _gender: Number;
+  private _name: String;
 
-  /**
-   * Getter $id
-   * @return {Number}
-   */
-  public getId(): Number {
-    return this.id;
+  get id(): Number {
+      return this._id;
   }
 
-  /**
-   * Getter $castId
-   * @return {Number}
-   */
-  public getCastId(): Number {
-    return this.castId;
+  set id(value: Number) {
+      this._id = value;
   }
 
-  /**
-   * Getter $character
-   * @return {String}
-   */
-  public getCharacter(): String {
-    return this.character;
+  get castId(): Number {
+      return this._castId;
   }
 
-  /**
-   * Getter $gender
-   * @return {Number}
-   */
-  public getGender(): Number {
-    return this.gender;
+  set castId(value: Number) {
+      this._castId = value;
   }
 
-  /**
-   * Getter $name
-   * @return {String}
-   */
-  public getName(): String {
-    return this.name;
+  get character(): String {
+      return this._character;
   }
 
-  /**
-   * Setter $id
-   * @param {Number} value
-   */
-  public setId(value: Number): Cast {
-    this.id = value;
-    return this;
+  set character(value: String) {
+      this._character = value;
   }
 
-  /**
-   * Setter $castId
-   * @param {Number} value
-   */
-  public setCastId(value: Number): Cast {
-    this.castId = value;
-    return this;
+  get gender(): Number {
+      return this._gender;
   }
 
-  /**
-   * Setter $character
-   * @param {String} value
-   */
-  public setCharacter(value: String): Cast {
-    this.character = value;
-    return this;
+  set gender(value: Number) {
+      this._gender = value;
   }
 
-  /**
-   * Setter $gender
-   * @param {Number} value
-   */
-  public setGender(value: Number): Cast {
-    this.gender = value;
-    return this;
+  get name(): String {
+      return this._name;
   }
 
-  /**
-   * Setter $name
-   * @param {String} value
-   */
-  public setName(value: String): Cast {
-    this.name = value;
-    return this;
+  set name(value: String) {
+      this._name = value;
   }
 }

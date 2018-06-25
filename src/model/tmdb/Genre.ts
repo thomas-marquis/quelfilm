@@ -1,38 +1,20 @@
 export default class Genre {
-  private id: Number;
-  private name: String;
+  private _id: Number;
+  private _name: String;
 
-  /**
-   * Getter $id
-   * @return {Number}
-   */
-  public getId(): Number {
-    return this.id;
+  get id(): Number {
+      return this._id;
   }
 
-  /**
-   * Getter $name
-   * @return {String}
-   */
-  public getName(): String {
-    return this.name;
+  set id(value: Number) {
+      this._id = value;
   }
 
-  /**
-   * Setter $id
-   * @param {Number} value
-   */
-  public setId(value: Number): Genre {
-    this.id = value;
-    return this;
+  get name(): String {
+      return this._name;
   }
 
-  /**
-   * Setter $name
-   * @param {String} value
-   */
-  public setName(value: String): Genre {
-    this.name = value;
-    return this;
+  set name(value: String) {
+      this._name = value;
   }
 }

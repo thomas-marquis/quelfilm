@@ -1,98 +1,41 @@
-import OriginalDetectIntentRequest from "./OriginalDetectIntentRequest";
-import Queryresult from "./QueryResult";
+import QueryResult from "./QueryResult";
 
-/**
- * The request message for a webhook call.
- */
 export default class WebhookRequest {
-  private session: String;
-  private responseId: String;
-  private queryResult: Queryresult;
-  private originalDetectIntentRequest: OriginalDetectIntentRequest;
+    private _session: String;
+    private _responseId: String;
+    private _queryResult: QueryResult;
+    private _originalDetectIntentRequest: any;
 
-  /**
-   * The unique identifier of detectIntent request session.
-   * Can be used to identify end-user inside webhook implementation.
-   * Format: projects/<Project ID>/agent/sessions/<Session ID>.
-   *
-   * @return {String}
-   */
-  public getSession(): String {
-    return this.session;
-  }
 
-  /**
-   * The unique identifier of the response.
-   * Contains the same value as [Streaming]DetectIntentResponse.response_id.
-   *
-   * @return {String}
-   */
-  public getResponseId(): String {
-    return this.responseId;
-  }
+    get session(): String {
+        return this._session;
+    }
 
-  /**
-   * The result of the conversational query or event processing.
-   * Contains the same value as [Streaming]DetectIntentResponse.query_result.
-   *
-   * @return {Queryresult}
-   */
-  public getQueryResult(): Queryresult {
-    return this.queryResult;
-  }
+    set session(value: String) {
+        this._session = value;
+    }
 
-  /**
-   * Optional. The contents of the original request that was passed to [Streaming]sessions.detectIntent call.
-   *
-   * @return {OriginalDetectIntentRequest}
-   */
-  public getOriginalDetectIntentRequest(): OriginalDetectIntentRequest {
-    return this.originalDetectIntentRequest;
-  }
+    get responseId(): String {
+        return this._responseId;
+    }
 
-  /**
-   * The unique identifier of detectIntent request session.
-   * Can be used to identify end-user inside webhook implementation.
-   * Format: projects/<Project ID>/agent/sessions/<Session ID>.
-   *
-   * @param {String} value
-   */
-  public setSession(value: String): WebhookRequest {
-    this.session = value;
-    return this;
-  }
+    set responseId(value: String) {
+        this._responseId = value;
+    }
 
-  /**
-   * The unique identifier of the response.
-   * Contains the same value as [Streaming]DetectIntentResponse.response_id.
-   *
-   * @param {String} value
-   */
-  public setResponseId(value: String): WebhookRequest {
-    this.responseId = value;
-    return this;
-  }
+    get queryResult(): QueryResult {
+        return this._queryResult;
+    }
 
-  /**
-   * The result of the conversational query or event processing.
-   * Contains the same value as [Streaming]DetectIntentResponse.query_result.
-   *
-   * @param {Queryresult} value
-   */
-  public setQueryResult(value: Queryresult): WebhookRequest {
-    this.queryResult = value;
-    return this;
-  }
+    set queryResult(value: QueryResult) {
+        this._queryResult = value;
+    }
 
-  /**
-   * Optional. The contents of the original request that was passed to [Streaming]sessions.detectIntent call.
-   *
-   * @param {OriginalDetectIntentRequest} value
-   */
-  public setOriginalDetectIntentRequest(
-    value: OriginalDetectIntentRequest
-  ): WebhookRequest {
-    this.originalDetectIntentRequest = value;
-    return this;
-  }
+    get originalDetectIntentRequest(): any {
+        return this._originalDetectIntentRequest;
+    }
+
+    set originalDetectIntentRequest(value: any) {
+        this._originalDetectIntentRequest = value;
+    }
 }

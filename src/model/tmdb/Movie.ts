@@ -2,197 +2,103 @@ import Genre from "./Genre";
 import Credit from "./Credit";
 
 export default class Movie {
-  private id: Number;
-  private title: String;
-  private genres: Array<Genre>;
-  private overview: String;
-  private posterPath: String;
-  private originalLanguage: String;
-  private voteAverage: Number;
-  private voteCount: Number;
-  private popularity: Number;
-  private releaseDate: Date;
-  private credit: Credit;
+  private _id: Number;
+  private _title: String;
+  private _genres: Array<Genre>;
+  private _overview: String;
+  private _posterPath: String;
+  private _originalLanguage: String;
+  private _voteAverage: Number;
+  private _voteCount: Number;
+  private _popularity: Number;
+  private _releaseDate: Date;
+  private _credit: Credit;
 
-  constructor() {
-    this.genres = new Array();
+  get id(): Number {
+      return this._id;
   }
 
-  /**
-   * Getter $id
-   * @return {Number}
-   */
-  public geId(): Number {
-    return this.id;
+  set id(value: Number) {
+      this._id = value;
   }
 
-  /**
-   * Getter $title
-   * @return {String}
-   */
-  public getTitle(): String {
-    return this.title;
+  get title(): String {
+      return this._title;
   }
 
-  /**
-   * Getter $genres
-   * @return {Array<Genre>}
-   */
-  public getGenres(): Array<Genre> {
-    return this.genres;
+  set title(value: String) {
+      this._title = value;
   }
 
-  /**
-   * Getter $overview
-   * @return {String}
-   */
-  public getOverview(): String {
-    return this.overview;
+  get genres(): Array<Genre> {
+      return this._genres;
   }
 
-  /**
-   * Getter $posterPath
-   * @return {String}
-   */
-  public getPosterPath(): String {
-    return this.posterPath;
+  set genres(value: Array<Genre>) {
+      this._genres = value;
   }
 
-  /**
-   * Getter $originalLanguage
-   * @return {String}
-   */
-  public getOriginalLanguage(): String {
-    return this.originalLanguage;
+  get overview(): String {
+      return this._overview;
   }
 
-  /**
-   * Getter $voteAverage
-   * @return {Number}
-   */
-  public getVoteAverage(): Number {
-    return this.voteAverage;
+  set overview(value: String) {
+      this._overview = value;
   }
 
-  /**
-   * Getter $voteCount
-   * @return {Number}
-   */
-  public getVoteCount(): Number {
-    return this.voteCount;
+  get posterPath(): String {
+      return this._posterPath;
   }
 
-  /**
-   * Getter $popularity
-   * @return {Number}
-   */
-  public getPopularity(): Number {
-    return this.popularity;
+  set posterPath(value: String) {
+      this._posterPath = value;
   }
 
-  /**
-   * Getter $releaseDate
-   * @return {Date}
-   */
-  public getReleaseDate(): Date {
-    return this.releaseDate;
+  get originalLanguage(): String {
+      return this._originalLanguage;
   }
 
-  /**
-   * Getter $credit
-   * @return {Credit}
-   */
-  public getCredit(): Credit {
-    return this.credit;
+  set originalLanguage(value: String) {
+      this._originalLanguage = value;
   }
 
-  /**
-   * Setter $id
-   * @param {Number} value
-   */
-  public setId(value: Number): Movie {
-    this.id = value;
-    return this;
+  get voteAverage(): Number {
+      return this._voteAverage;
   }
 
-  /**
-   * Setter $title
-   * @param {String} value
-   */
-  public setTitle(value: String): Movie {
-    this.title = value;
-    return this;
+  set voteAverage(value: Number) {
+      this._voteAverage = value;
   }
 
-  /**
-   * Setter $overview
-   * @param {String} value
-   */
-  public setOverview(value: String): Movie {
-    this.overview = value;
-    return this;
+  get voteCount(): Number {
+      return this._voteCount;
   }
 
-  /**
-   * Setter $posterPath
-   * @param {String} value
-   */
-  public setPosterPath(value: String): Movie {
-    this.posterPath = value;
-    return this;
+  set voteCount(value: Number) {
+      this._voteCount = value;
   }
 
-  /**
-   * Setter $originalLanguage
-   * @param {String} value
-   */
-  public setOriginalLanguage(value: String): Movie {
-    this.originalLanguage = value;
-    return this;
+  get popularity(): Number {
+      return this._popularity;
   }
 
-  /**
-   * Setter $voteAverage
-   * @param {Number} value
-   */
-  public setVoteAverage(value: Number): Movie {
-    this.voteAverage = value;
-    return this;
+  set popularity(value: Number) {
+      this._popularity = value;
   }
 
-  /**
-   * Setter $voteCount
-   * @param {Number} value
-   */
-  public setVoteCount(value: Number): Movie {
-    this.voteCount = value;
-    return this;
+  get releaseDate(): Date {
+      return this._releaseDate;
   }
 
-  /**
-   * Setter $popularity
-   * @param {Number} value
-   */
-  public setPopularity(value: Number): Movie {
-    this.popularity = value;
-    return this;
+  set releaseDate(value: Date) {
+      this._releaseDate = value;
   }
 
-  /**
-   * Setter $releaseDate
-   * @param {Date} value
-   */
-  public setReleaseDate(value: Date): Movie {
-    this.releaseDate = value;
-    return this;
+  get credit(): Credit {
+      return this._credit;
   }
 
-  /**
-   * Setter $credit
-   * @param {Credit} value
-   */
-  public setCredit(value: Credit): Movie {
-    this.credit = value;
-    return this;
+  set credit(value: Credit) {
+      this._credit = value;
   }
 }

@@ -5,7 +5,10 @@
   "main": "build/index.js",
   "scripts": {
     "test": "mocha",
-    "build": "tsc"
+    "build": "tsc",
+    "deploy": "tsc && npm run conf:switch && gcloud beta functions deploy main --trigger-http",
+    "conf:switch": "gcloud config configurations activate quelfilm2",
+    "conf:list": "gcloud config configurations list"
   },
   "repository": {
     "type": "git",
@@ -23,5 +26,7 @@
     "url": "https://github.com/thomas-marquis/quelfilm/issues"
   },
   "homepage": "https://github.com/thomas-marquis/quelfilm#readme",
-  "dependencies": {}
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
 }
