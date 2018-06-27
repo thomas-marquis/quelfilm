@@ -7,13 +7,15 @@ import MovieDetails from "../model/tmdb/MovieDetails";
 import SearchCriteria from "../model/tmdb/SearchCriteria";
 
 export default class TheMovieDatabaseRepository implements MovieRepository {
+    private requiredParams = {
+        api_key: apiConfig.apiKey,
+        language: apiConfig.lang,
+    };
+
     public getGenreList(): Promise<Array<Genre>> {
         return new Promise((resolve, reject) => {
             http.get(`${apiConfig.baseUrl}genre/movie/list`, {
-                params: {
-                    api_key: apiConfig.apiKey,
-                    language: apiConfig.lang,
-                }
+                params: this.requiredParams,
             })
                 .then(response => {
                     const genres: Array<Genre> = response.data.genres;
@@ -26,10 +28,7 @@ export default class TheMovieDatabaseRepository implements MovieRepository {
     public getMovieById(id: Number): Promise<MovieDetails> {
         return new Promise((resolve, reject) => {
             http.get(`${apiConfig.baseUrl}movie/${id}`, {
-                params: {
-                    api_key: apiConfig.apiKey,
-                    language: apiConfig.lang,
-                }
+                params: this.requiredParams,
             })
                 .then(response => {
                     const movie: MovieDetails = response.data;
@@ -43,8 +42,7 @@ export default class TheMovieDatabaseRepository implements MovieRepository {
         return new Promise((resolve, reject) => {
             http.get(`${apiConfig.baseUrl}search/movie`, {
                 params: {
-                    api_key: apiConfig.apiKey,
-                    language: apiConfig.lang,
+                    ...this.requiredParams,
                     query,
                 }
             })
@@ -59,10 +57,7 @@ export default class TheMovieDatabaseRepository implements MovieRepository {
     public getPopularMovieList(): Promise<Array<MovieDetails>> {
         return new Promise((resolve, reject) => {
             http.get(`${apiConfig.baseUrl}movie/popular`, {
-                params: {
-                    api_key: apiConfig.apiKey,
-                    language: apiConfig.lang,
-                }
+                params: this.requiredParams,
             })
                 .then(response => {
                     const movies: Array<MovieDetails> = response.data.results;
@@ -76,8 +71,7 @@ export default class TheMovieDatabaseRepository implements MovieRepository {
         return new Promise((resolve, reject) => {
             http.get(`${apiConfig.baseUrl}discover/movie`, {
                 params: {
-                    api_key: apiConfig.apiKey,
-                    language: apiConfig.lang,
+                    ...this.requiredParams,
                     ...criteria,
                 }
             })
