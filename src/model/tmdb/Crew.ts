@@ -1,17 +1,10 @@
-export default class Crew {
-  private _id: Number;
+import AbstractElement from "./AbstractElement";
+
+export default class Crew extends AbstractElement {
   private _name: String;
   private _department: String;
   private _gender: Number;
   private _job: String;
-
-  get id(): Number {
-      return this._id;
-  }
-
-  set id(value: Number) {
-      this._id = value;
-  }
 
   get name(): String {
       return this._name;

@@ -1,17 +1,10 @@
-export default class Cast {
-  private _id: Number;
+import AbstractElement from "./AbstractElement";
+
+export default class Cast extends AbstractElement {
   private _castId: Number;
   private _character: String;
   private _gender: Number;
   private _name: String;
-
-  get id(): Number {
-      return this._id;
-  }
-
-  set id(value: Number) {
-      this._id = value;
-  }
 
   get castId(): Number {
       return this._castId;

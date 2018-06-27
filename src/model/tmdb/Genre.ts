@@ -1,14 +1,7 @@
-export default class Genre {
-  private _id: Number;
+import AbstractElement from "./AbstractElement";
+
+export default class Genre extends AbstractElement {
   private _name: String;
-
-  get id(): Number {
-      return this._id;
-  }
-
-  set id(value: Number) {
-      this._id = value;
-  }
 
   get name(): String {
       return this._name;

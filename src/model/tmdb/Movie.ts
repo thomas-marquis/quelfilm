@@ -1,104 +1,24 @@
 import Genre from "./Genre";
 import Credit from "./Credit";
+import MovieDetails from "./MovieDetails";
 
 export default class Movie {
-  private _id: Number;
-  private _title: String;
-  private _genres: Array<Genre>;
-  private _overview: String;
-  private _posterPath: String;
-  private _originalLanguage: String;
-  private _voteAverage: Number;
-  private _voteCount: Number;
-  private _popularity: Number;
-  private _releaseDate: Date;
+  private _details: MovieDetails;
   private _credit: Credit;
 
-  get id(): Number {
-      return this._id;
-  }
+    get details(): MovieDetails {
+        return this._details;
+    }
 
-  set id(value: Number) {
-      this._id = value;
-  }
+    set details(value: MovieDetails) {
+        this._details = value;
+    }
 
-  get title(): String {
-      return this._title;
-  }
+    get credit(): Credit {
+        return this._credit;
+    }
 
-  set title(value: String) {
-      this._title = value;
-  }
-
-  get genres(): Array<Genre> {
-      return this._genres;
-  }
-
-  set genres(value: Array<Genre>) {
-      this._genres = value;
-  }
-
-  get overview(): String {
-      return this._overview;
-  }
-
-  set overview(value: String) {
-      this._overview = value;
-  }
-
-  get posterPath(): String {
-      return this._posterPath;
-  }
-
-  set posterPath(value: String) {
-      this._posterPath = value;
-  }
-
-  get originalLanguage(): String {
-      return this._originalLanguage;
-  }
-
-  set originalLanguage(value: String) {
-      this._originalLanguage = value;
-  }
-
-  get voteAverage(): Number {
-      return this._voteAverage;
-  }
-
-  set voteAverage(value: Number) {
-      this._voteAverage = value;
-  }
-
-  get voteCount(): Number {
-      return this._voteCount;
-  }
-
-  set voteCount(value: Number) {
-      this._voteCount = value;
-  }
-
-  get popularity(): Number {
-      return this._popularity;
-  }
-
-  set popularity(value: Number) {
-      this._popularity = value;
-  }
-
-  get releaseDate(): Date {
-      return this._releaseDate;
-  }
-
-  set releaseDate(value: Date) {
-      this._releaseDate = value;
-  }
-
-  get credit(): Credit {
-      return this._credit;
-  }
-
-  set credit(value: Credit) {
-      this._credit = value;
-  }
+    set credit(value: Credit) {
+        this._credit = value;
+    }
 }
