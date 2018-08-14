@@ -23,5 +23,7 @@
     "url": "https://github.com/thomas-marquis/quelfilm/issues"
   },
   "homepage": "https://github.com/thomas-marquis/quelfilm#readme",
-  "dependencies": {}
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
 }
